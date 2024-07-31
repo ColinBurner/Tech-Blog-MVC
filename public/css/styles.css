@@ -1,48 +1,210 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #e7c9e6;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 header {
-    background-color: #333;
+    background: radial-gradient(circle, rgba(247, 208, 255, 1) 0%, rgba(255, 29, 227, 1) 87%);
     color: white;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav a {
-    color: white;
-    margin: 0 10px;
+    color: rgb(44, 44, 44);
     text-decoration: none;
+    text-shadow: 1px 1px 2px rgb(87, 21, 78);
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #af16f7;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: rgb(228, 56, 219);
+    text-shadow: 1px 1px 2px black;
+}
+
+p {
+    color: #810ba5;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
 }
 
 .container {
     width: 80%;
     margin: auto;
+    padding: 20px;
+    background: rgb(224, 169, 223);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
     overflow: hidden;
 }
 
+/* Card Styles */
 .card {
-    background: #fff;
+    background: rgb(224, 169, 223);
     padding: 20px;
     margin: 20px 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card h2 {
     margin-top: 0;
+    font-size: 24px;
+    color: #cf31ff;
+    text-shadow: 1px 1px 2px black;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #e226d9;
+    text-shadow: 1px 1px 2px black;
+}
+
+.card a {
+    color: #cf31ff;
+    text-shadow: 1px 1px 2px black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styles */
+form {
+    margin: 20px 0;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #e933f3;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
 }
 
 button {
-    background-color: #333;
+    background-color: #44053f;
     color: white;
-    padding: 10px;
+    padding: 10px 20px;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #eb10ff;
+}
+
+/* Footer Styles */
+footer {
+    background: radial-gradient(circle, rgba(247, 208, 255, 1) 0%, rgba(255, 29, 227, 1) 87%);
+    color: rgb(44, 44, 44);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 2px rgb(87, 21, 78);
+}
+
+/* Comment Styles */
+.comment-form {
+    margin-top: 20px;
+}
+
+.comment-form textarea {
+    height: 100px;
+}
+
+.comment {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f560f5;
+    border-left: 3px solid #61177e;
+    border-radius: 4px;
+    color: #df43ca;
+    text-shadow: 1px 1px 2px white;
+}
+
+.comment p {
+    margin: 5px 0;
+    color: #111011;
+}
+
+.comment .comment-header {
+    font-weight: bold;
+    color: #2d1a33;
+    text-shadow: 1px 1px 2px rgb(236, 110, 219);
+}
+
+/* User Info Styles */
+.user-info {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-left: 3px solid #61177e;
+    border-radius: 4px;
+}
+
+.user-info h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #333;
+}
+
+.user-info p {
+    margin: 5px 0;
+    color: #666;
 }
