@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+<p>{{content}}</p>
+<p>Created by: {{user.username}} on {{createdAt}}</p>
+{{#if logged_in}}
+<form class="comment-form">
+    <div>
+        <textarea id="comment-body" name="comment-body" required></textarea>
+    </div>
+    <button type="submit">Add Comment</button>
+</form>
+<script src="/js/comment.js"></script>
+{{/if}}
+<h2>Comments</h2>
+{{#each comments}}
+    {{> comment}}
+{{/each}}

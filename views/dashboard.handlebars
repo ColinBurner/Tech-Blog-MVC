@@ -1,0 +1,25 @@
+<h1>Dashboard</h1>
+{{> user user=this}}
+
+<form class="new-post-form">
+    <div>
+        <label for="post-title">Post Title</label>
+        <input type="text" id="post-title" name="post-title" required>
+    </div>
+    <div>
+        <label for="post-content">Content</label>
+        <textarea id="post-content" name="post-content" required></textarea>
+    </div>
+    <button type="submit">Add Post</button>
+</form>
+{{#each posts}}
+<div class="card">
+    <h2>{{this.title}}</h2>
+    <p>{{this.content}}</p>
+    <p>Created by: {{this.user.username}} on {{this.createdAt}}</p>
+    <form class="delete-form" action="/api/posts/{{this.id}}" method="POST">
+        <button type="submit">Delete</button>
+    </form>
+</div>
+{{/each}}
+<script src="/js/post.js"></script>
